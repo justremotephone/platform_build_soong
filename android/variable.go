@@ -94,6 +94,10 @@ type variableProperties struct {
 		Pdk struct {
 			Enabled *bool
 		}
+		
+		Uses_non_treble_camera struct {
+			Cflags []string
+		}
 	} `android:"arch_variant"`
 }
 
@@ -165,6 +169,8 @@ type productVariables struct {
 	BtConfigIncludeDir *string `json:",omitempty"`
 
 	Override_rs_driver *string `json:",omitempty"`
+	
+	Uses_non_treble_camera  *bool `json:",omitempty"`
 
 	DeviceKernelHeaders []string `json:",omitempty"`
 }
